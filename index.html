@@ -3,30 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Student Result Calculator</title>
+    <title>Employee Salary Management</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="container">
-        <h1>Student Result Calculator</h1>
-        <label>Enter Number of Subjects</label>
+        <h2>Employee Salary Management System</h2>
+        <input type="text" id="name" placeholder="Employee Name">
+        <input type="text" id="empId" placeholder="Employee ID">
 
-        <br>
+        <input type="number" id="salary" placeholder="Salary">
 
-        <input type="number" id="subjects" value="5">
+        <input type="text" id="dept" placeholder="Department">
 
-        <br>
+        <button onclick="addEmployee()">Add Employee</button>
 
-        <button onclick="calculateResult()">
-            Calculate Result
-        </button>
+        <div class="btn-group">
 
-        <div id="result"></div>
+            <button onclick="displayEmployees()">Display All</button>
 
+            <button onclick="filterSalary()">Salary > 50000</button>
+
+            <button onclick="totalSalary()">Total Salary</button>
+            <button onclick="averageSalary()">Average Salary</button>
+        </div>
+        <button onclick="countDepartment()">Count by Department</button>
+        <div id="output"></div>
     </div>
-
-    <script src="script.js"></script>
-
+    <script src="style.js"></script>
 </body>
-
 </html>
